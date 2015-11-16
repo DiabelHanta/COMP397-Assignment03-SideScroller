@@ -12,7 +12,7 @@ var objects;
         function Player() {
             _super.call(this, "player");
             //position
-            this.y = 430;
+            this.x = 100;
             //play engine sound
             createjs.Sound.play("backgroundMusic", 0, 0, 0, -1, 1, 0);
         }
@@ -22,7 +22,7 @@ var objects;
          */
         Player.prototype.update = function () {
             //finding mouse position on x-axis (follows mouse)
-            this.x = stage.mouseX;
+            this.y = stage.mouseY;
         };
         return Player;
     })(objects.GameObject);

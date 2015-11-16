@@ -9,7 +9,7 @@
             super("player");
 
             //position
-            this.y = 430;
+            this.x = 100;
             //play engine sound
             createjs.Sound.play("backgroundMusic", 0, 0, 0, -1, 1, 0);
         }
@@ -21,7 +21,7 @@
         public update(): void
         {
             //finding mouse position on x-axis (follows mouse)
-            this.x = stage.mouseX;
+            this.y = stage.mouseY;
         }
     }
 }

@@ -13,6 +13,7 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/player.ts" />
 /// <reference path="../objects/island.ts" />
+/// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/cloud.ts" />
 /// <reference path="../objects/background.ts" />
 /// <reference path="../objects/scene.ts" />
@@ -34,45 +35,35 @@ var over;
 //MANAGERS
 var scoreboard;
 //TEXTURE ATLAS - ALL JSON FILES
-var dataPlayer = {
+var data = {
     "images": [
-        "atlas.png"
+        "../../Assets/images/atlas.png"
     ],
     "frames": [
-        [1, 1, 104, 70, 0, 0, 0],
-        [107, 1, 80, 55, 0, 0, 0]
+        [1, 1, 241, 168, 0, 0, 0],
+        [244, 1, 136, 111, 0, 0, 0],
+        [244, 114, 91, 91, 0, 0, 0],
+        [337, 114, 75, 99, 0, 0, -1],
+        [382, 1, 20, 52, 0, 0, 0],
+        [382, 55, 20, 52, 0, 0, 0],
+        [1, 171, 80, 55, 0, 0, 0],
+        [83, 171, 44, 42, 0, 0, 0],
+        [129, 171, 32, 31, 0, 0, 0],
+        [163, 171, 30, 29, 0, -1, -1],
+        [195, 171, 20, 52, 0, 0, 0]
     ],
     "animations": {
-        "ship.fw": [0],
-        "player": [1]
-    }
-};
-var dataEnemy = {
-    "images": [
-        "atlasEnemy.png"
-    ],
-    "frames": [
-        [1, 1, 91, 91, 0, 0, 0],
-        [94, 1, 99, 75, 0, 0, 0]
-    ],
-    "animations": {
-        "enemyUFO": [0],
-        "enemy": [1]
-    }
-};
-var dataPickup = {
-    "images": [
-        "atlasPickup.png"
-    ],
-    "frames": [
-        [1, 1, 20, 52, 0, 0, 0],
-        [1, 55, 20, 52, 0, 0, 0],
-        [1, 109, 20, 52, 0, 0, 0]
-    ],
-    "animations": {
-        "BlueCrystal": [0],
-        "GreenCrystal": [1],
-        "PurpleCrystal": [2]
+        "nebula": [0],
+        "meteorBig": [1],
+        "enemyUFO": [2],
+        "enemy": [3],
+        "BlueCrystal": [4],
+        "GreenCrystal": [5],
+        "player": [6],
+        "meteorSmall": [7],
+        "ship1": [8],
+        "enemyship": [9],
+        "PurpleCrystal": [10]
     }
 };
 //MANIFEST OF ALL ASSETS (ARRAY)
@@ -90,7 +81,7 @@ function preload() {
     assets.on("complete", init, this);
     assets.loadManifest(manifest);
     //SPRITE SHEET IS CONFIGIRUED
-    atlasPlayer = new createjs.SpriteSheet(dataPlayer);
+    atlasPlayer = new createjs.SpriteSheet(data);
 }
 //INITIALZING METHOD
 function init() {

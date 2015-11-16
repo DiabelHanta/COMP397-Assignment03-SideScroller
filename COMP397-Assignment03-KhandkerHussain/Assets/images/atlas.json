@@ -5,18 +5,31 @@
 ],
 
 "frames": [
-    [1, 1, 104, 70, 0, 0, 0],
-    [107, 1, 80, 55, 0, 0, 0]
+    [1, 1, 241, 168, 0, 0, 0],
+    [244, 1, 136, 111, 0, 0, 0],
+    [244, 114, 91, 91, 0, 0, 0],
+    [337, 114, 75, 99, 0, 0, -1],
+    [382, 1, 20, 52, 0, 0, 0],
+    [382, 55, 20, 52, 0, 0, 0],
+    [1, 171, 80, 55, 0, 0, 0],
+    [83, 171, 44, 42, 0, 0, 0],
+    [129, 171, 32, 31, 0, 0, 0],
+    [163, 171, 30, 29, 0, -1, -1],
+    [195, 171, 20, 52, 0, 0, 0]
 ],
 
 "animations": {
-    "ship.fw": [0],
-    "player": [1]
-},
-
-"texturepacker": [
-        "SmartUpdateHash: $TexturePacker:SmartUpdate:b25fad313df506966fba5212cf350bf5:b3282a0a825a58122ed7513c05ab84a8:cbce6b53f0f49e0bf15173c25c41f876$",
-        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
-]
-
+    "nebula": [0],
+    "meteorBig": [1],
+    "enemyUFO": [2],
+    "enemy": [3],
+    "BlueCrystal": [4],
+    "GreenCrystal": [5],
+    "player": [6],
+    "meteorSmall": [7],
+    "ship1": [8],
+    "enemyship": [9],
+    "PurpleCrystal": [10]
 }
+
+};

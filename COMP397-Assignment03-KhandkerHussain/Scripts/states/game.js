@@ -39,10 +39,10 @@ var states;
                 this.addChild(this._clouds[cloud]);
             }
             //adds score label to scene
-            this._scoreLabel = new objects.Label("Score: ", "40px Showcard Gothic", "#000000", 100, 25, true);
+            this._scoreLabel = new objects.Label("Score: ", "40px Showcard Gothic", "#FFFFFF", 100, 25, true);
             this.addChild(this._scoreLabel);
             //adds lives label to scene
-            this._livesLabel = new objects.Label("Lives: ", "40px Showcard Gothic", "#000000", 400, 25, true);
+            this._livesLabel = new objects.Label("Lives: ", "40px Showcard Gothic", "#FFFFFF", 400, 25, true);
             this.addChild(this._livesLabel);
             //INSTANTIATE COLLISION MANAGER
             this._collision = new managers.Collision();

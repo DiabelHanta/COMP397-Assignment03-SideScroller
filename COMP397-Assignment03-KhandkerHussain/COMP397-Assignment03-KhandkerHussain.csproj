@@ -63,8 +63,6 @@
     <Content Include="Assets\audio\explode.wav" />
     <Content Include="Assets\audio\pickup.wav" />
     <Content Include="Assets\images\atlas.png" />
-    <Content Include="Assets\images\atlasEnemy.png" />
-    <Content Include="Assets\images\atlasPickup.png" />
     <Content Include="Assets\images\background.png" />
     <Content Include="Assets\images\BlueCrystal.png" />
     <Content Include="Assets\images\enemy.png" />
@@ -72,10 +70,8 @@
     <Content Include="Assets\images\startButton.png" />
     <Content Include="Content\reset.css" />
     <Content Include="packages.config" />
-    <Content Include="Assets\images\atlas.json" />
     <Content Include="Assets\fonts\score.ttf" />
-    <Content Include="Assets\images\atlasEnemy.json" />
-    <Content Include="Assets\images\atlasPickup.json" />
+    <Content Include="Assets\images\atlas.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -109,10 +105,10 @@
     <TypeScriptCompile Include="Scripts\objects\background.ts" />
     <TypeScriptCompile Include="Scripts\objects\button.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud.ts" />
+    <TypeScriptCompile Include="Scripts\objects\enemy.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameObject.ts" />
     <TypeScriptCompile Include="Scripts\objects\island.ts" />
     <TypeScriptCompile Include="Scripts\objects\label.ts" />
-    <TypeScriptCompile Include="Scripts\objects\plane.ts" />
     <TypeScriptCompile Include="Scripts\objects\player.ts" />
     <TypeScriptCompile Include="Scripts\objects\scene.ts" />
     <TypeScriptCompile Include="Scripts\states\game.ts" />
