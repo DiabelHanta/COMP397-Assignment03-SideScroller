@@ -5,17 +5,18 @@
 ],
 
 "frames": [
-    [1, 1, 226, 178, 0, 0, 0],
-    [1, 181, 62, 62, 0, 0, 0],
-    [65, 181, 62, 51, 0, -3, -9],
-    [129, 181, 150, 50, 0, 0, 0]
+    [1, 1, 104, 70, 0, 0, 0],
+    [107, 1, 80, 55, 0, 0, 0]
 ],
 
 "animations": {
-    "cloud": [0],
-    "island": [1],
-    "plane": [2],
-    "StartButton": [3]
-}
+    "ship.fw": [0],
+    "player": [1]
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:b25fad313df506966fba5212cf350bf5:b3282a0a825a58122ed7513c05ab84a8:cbce6b53f0f49e0bf15173c25c41f876$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
 
 }
