@@ -9,8 +9,8 @@ var objects;
         __extends(Ocean, _super);
         //CONSTRUCTOR
         function Ocean() {
-            _super.call(this, assets.getResult("ocean"));
-            this._dy = 5;
+            _super.call(this, assets.getResult("background"));
+            this._dx = 5;
             this._reset(); //resets y position of ocean
         }
         //PUBLIC METHODS
@@ -18,22 +18,22 @@ var objects;
          * Update method for Ocean
          */
         Ocean.prototype.update = function () {
-            this.y += this._dy;
+            this.x -= this._dx;
             this._checkBounds();
         };
         //PRIVATE METHODS
         /**
-         * Resetes Ocean to y= -960
+         * Resetes Ocean to x= 0
          */
         Ocean.prototype._reset = function () {
-            this.y = -960;
+            this.x = 0;
         };
         /**
          * Checks to see when ocean needs to "reset"
          */
         Ocean.prototype._checkBounds = function () {
             //conditional to call reset() to reposition the y-axis
-            if (this.y >= 0) {
+            if (this.x <= -790) {
                 this._reset();
             }
         };

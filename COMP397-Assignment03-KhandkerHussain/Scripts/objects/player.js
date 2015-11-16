@@ -6,11 +6,12 @@ var __extends = (this && this.__extends) || function (d, b) {
 var objects;
 (function (objects) {
     //PLANE CLASS
-    var Plane = (function (_super) {
-        __extends(Plane, _super);
+    var Player = (function (_super) {
+        __extends(Player, _super);
         //CONSTRUCTOR
-        function Plane() {
-            _super.call(this, "plane");
+        function Player() {
+            _super.call(this, "player");
+            //position
             this.y = 430;
             //play engine sound
             createjs.Sound.play("backgroundMusic", 0, 0, 0, -1, 1, 0);
@@ -19,12 +20,12 @@ var objects;
         /**
          * update method for plane class
          */
-        Plane.prototype.update = function () {
-            //finding mouse position (follows mouse)
+        Player.prototype.update = function () {
+            //finding mouse position on x-axis (follows mouse)
             this.x = stage.mouseX;
         };
-        return Plane;
+        return Player;
     })(objects.GameObject);
-    objects.Plane = Plane;
+    objects.Player = Player;
 })(objects || (objects = {}));
-//# sourceMappingURL=plane.js.map
+//# sourceMappingURL=player.js.map

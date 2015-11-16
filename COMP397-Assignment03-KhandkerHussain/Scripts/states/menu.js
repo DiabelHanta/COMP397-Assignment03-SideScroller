@@ -17,13 +17,13 @@ var states;
         //OVERRIDING THE FOLLOWING FUNCTIONS (from scene.ts)
         Start.prototype.start = function () {
             //BACKGROUND OBJECT
-            this._background = new objects.Background(); //referring plane type object to plane's sprite w/i "plane.ts"
-            this.addChild(this._background); //adding plane sprite
+            this._background = new objects.Background(); //referring background type object to background's sprite w/i "background.ts"
+            this.addChild(this._background); //adding background sprite
             //HELLO LABEL
-            this._gameLabel = new objects.Label("Space Jewels! (not balls...)", "35px Papyrus", "#000000", 320, 70, true);
+            this._gameLabel = new objects.Label("Space Jewels! (not balls...)", "35px Papyrus", "#FFFFFF", 320, 70, true);
             this.addChild(this._gameLabel); //adds "helloLabel" to the stage as a "child"
             //INSTRUCTIONS LABEL
-            this._instructions = new objects.Label("Instructions:\n1. Avoid enemy space ships\n2.Pickup jewels\n3. Profit...\n4. You Win!", "25px Papyrus", "#000000", 360, 225, true);
+            this._instructions = new objects.Label("Instructions:\n1. Avoid enemy space ships\n2.Pickup jewels\n3. Profit...\n4. You Win!", "25px Papyrus", "#FFFFFF", 360, 225, true);
             this.addChild(this._instructions);
             //START BUTTON
             this._startButton = new objects.Button("startButton", 320, 380);

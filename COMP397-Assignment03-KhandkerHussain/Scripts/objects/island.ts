@@ -26,7 +26,7 @@
 
         //PRIVATE METHODS
         /**
-         * Resetes Ocean to y= -960
+         * Resetes Jewel to y= -960
          */
         private _reset(): void
         {

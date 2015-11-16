@@ -25,14 +25,14 @@ var states;
             console.log(scoreboard.getLives());
             console.log(scoreboard.getScore());
             //adds background to scene
-            this._background = new objects.Background(); //referring ship type object to plane's sprite w/i "ship.ts"
+            this._background = new objects.Background(); //referring ship type object to player's sprite w/i "ship.ts"
             this.addChild(this._background); //adding ship sprite
             //adds island to scene
             this._island = new objects.Island();
             this.addChild(this._island);
-            //adds plane to scene
-            this._plane = new objects.Plane();
-            this.addChild(this._plane);
+            //adds player to scene
+            this._player = new objects.Player();
+            this.addChild(this._player);
             //adds clouds ARRAY to scene
             for (var cloud = 0; cloud < 3; cloud++) {
                 this._clouds[cloud] = new objects.Cloud();
@@ -42,7 +42,7 @@ var states;
             this._scoreLabel = new objects.Label("Score: ", "40px Showcard Gothic", "#000000", 100, 25, true);
             this.addChild(this._scoreLabel);
             //adds lives label to scene
-            this._livesLabel = new objects.Label("Lives: ", "40px Showcard Gothic", "#000000", 375, 25, true);
+            this._livesLabel = new objects.Label("Lives: ", "40px Showcard Gothic", "#000000", 400, 25, true);
             this.addChild(this._livesLabel);
             //INSTANTIATE COLLISION MANAGER
             this._collision = new managers.Collision();
@@ -53,14 +53,14 @@ var states;
         Game.prototype.update = function () {
             this._background.update(); //calling background's update() from "background.ts"
             this._island.update(); //calling island's update() from "island.ts"
-            this._plane.update(); //calling plane's update() from "plane.ts"
+            this._player.update(); //calling player's update() from "player.ts"
             //update each cloud to scene
             for (var cloud = 0; cloud < 3; cloud++) {
                 this._clouds[cloud].update(); //calling cloud's update() from "cloud.ts"
-                this._collision.update(this._plane, this._clouds[cloud]);
+                this._collision.update(this._player, this._clouds[cloud]);
             }
-            //COLLISION B/W PLANE AND ISLAND
-            this._collision.update(this._plane, this._island);
+            //COLLISION B/W player AND ISLAND
+            this._collision.update(this._player, this._island);
             this._updateScore();
         };
         //UPDATING THE LABELS

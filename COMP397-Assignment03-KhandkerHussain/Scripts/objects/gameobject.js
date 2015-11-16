@@ -10,7 +10,7 @@ var objects;
         __extends(GameObject, _super);
         //CONSTRUCTOR
         function GameObject(imageString) {
-            _super.call(this, atlas, imageString);
+            _super.call(this, atlasPlayer, imageString);
             this._name = imageString;
             this._width = this.getBounds().width;
             this._height = this.getBounds().height;

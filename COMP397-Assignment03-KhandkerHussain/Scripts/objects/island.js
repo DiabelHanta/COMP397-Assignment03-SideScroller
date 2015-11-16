@@ -23,7 +23,7 @@ var objects;
         };
         //PRIVATE METHODS
         /**
-         * Resetes Ocean to y= -960
+         * Resetes Jewel to y= -960
          */
         Island.prototype._reset = function () {
             //random location on x-axis. (note: + 1 shifts the initial position from canvas to right

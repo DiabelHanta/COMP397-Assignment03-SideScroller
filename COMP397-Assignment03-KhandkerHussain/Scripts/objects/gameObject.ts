@@ -12,7 +12,7 @@
         //CONSTRUCTOR
         constructor(imageString:string)
         {
-            super(atlas, imageString);
+            super(atlasPlayer, imageString);
 
             this._name = imageString;
             this._width = this.getBounds().width;

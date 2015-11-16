@@ -11,10 +11,10 @@
 /// <reference path="../objects/gameobject.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/button.ts" />
-/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/player.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/cloud.ts" />
-/// <reference path="../objects/ocean.ts" />
+/// <reference path="../objects/background.ts" />
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../states/over.ts" />
 /// <reference path="../states/game.ts" />
@@ -26,35 +26,59 @@ var stage;
 var stats;
 var state;
 var currentState; //alias for our current state
-var atlas; //texture/sprite atlas
+var atlasPlayer; //texture/sprite atlas
 //GAME OBJECTS
 var menu;
 var game;
 var over;
 //MANAGERS
 var scoreboard;
-//TEXTURE ATLAS
-var data = {
+//TEXTURE ATLAS - ALL JSON FILES
+var dataPlayer = {
     "images": [
-        "../../Assets/images/atlas.png"
+        "atlas.png"
     ],
     "frames": [
-        [1, 1, 226, 178, 0, 0, 0],
-        [1, 181, 62, 62, 0, 0, 0],
-        [65, 181, 62, 51, 0, -3, -9],
-        [129, 181, 150, 50, 0, 0, 0]
+        [1, 1, 104, 70, 0, 0, 0],
+        [107, 1, 80, 55, 0, 0, 0]
     ],
     "animations": {
-        "cloud": [0],
-        "island": [1],
-        "plane": [2],
-        "StartButton": [3]
+        "ship.fw": [0],
+        "player": [1]
+    }
+};
+var dataEnemy = {
+    "images": [
+        "atlasEnemy.png"
+    ],
+    "frames": [
+        [1, 1, 91, 91, 0, 0, 0],
+        [94, 1, 99, 75, 0, 0, 0]
+    ],
+    "animations": {
+        "enemyUFO": [0],
+        "enemy": [1]
+    }
+};
+var dataPickup = {
+    "images": [
+        "atlasPickup.png"
+    ],
+    "frames": [
+        [1, 1, 20, 52, 0, 0, 0],
+        [1, 55, 20, 52, 0, 0, 0],
+        [1, 109, 20, 52, 0, 0, 0]
+    ],
+    "animations": {
+        "BlueCrystal": [0],
+        "GreenCrystal": [1],
+        "PurpleCrystal": [2]
     }
 };
 //MANIFEST OF ALL ASSETS (ARRAY)
 var manifest = [
-    { id: "startButton", src: "../../Assets/images/gui/startButton.png" },
-    { id: "background", src: "../../Assets/images/backgrounds/background.png" },
+    { id: "startButton", src: "../../Assets/images/startButton.png" },
+    { id: "background", src: "../../Assets/images/background.png" },
     { id: "backgroundMusic", src: "../../Assets/audio/backgroundMusic.mp3" },
     { id: "explode", src: "../../Assets/audio/explode.wav" },
     { id: "pickup", src: "../../Assets/audio/pickup.wav" }
@@ -66,7 +90,7 @@ function preload() {
     assets.on("complete", init, this);
     assets.loadManifest(manifest);
     //SPRITE SHEET IS CONFIGIRUED
-    atlas = new createjs.SpriteSheet(data);
+    atlasPlayer = new createjs.SpriteSheet(dataPlayer);
 }
 //INITIALZING METHOD
 function init() {
