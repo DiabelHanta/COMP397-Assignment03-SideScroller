@@ -1,0 +1,12 @@
+IF YOUR FILES ON VISUAL STUDIO IS LOCKED (blue lock icon on the file name), after using Github
+
+*On Visual Studio - Go to View - Other Windows - Source Control Explorer
+-Click on blue linked message - Select None for Source Control Plugin (it show being set as Microsoft Git Provider)
+
+*If your changes still don't show - then change the local host
+-Go to C:\Users\Faim\Documents\IISExpress\config - drag config file to Visual Studio
+**To check the namespace that the localhost is associated with, debug your project and check the toolbar for IISExpress Icon, right click on it and check the name
+-check the localhost number for the project name that it is associated to - change to at least a 4 digit number
+-On the Solution Explorer on Visual Studio, select the folder with all the files for your project (the project folder, just below the solution file),
+right click on it and select Properties
+-Click Web, change the localhost number to the same number you changed in the config file, and then save everything

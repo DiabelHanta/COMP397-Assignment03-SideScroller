@@ -1,0 +1,6 @@
+C:\Users\Faim\Documents\Visual Studio 2013\Projects\COMP397-Midterm-Die-Roller\COMP397-Midterm-Die-Roller\bin\COMP397-Lesson2.dll.config
+C:\Users\Faim\Documents\Visual Studio 2013\Projects\COMP397-Midterm-Die-Roller\COMP397-Midterm-Die-Roller\bin\COMP397-Lesson2.dll
+C:\Users\Faim\Documents\Visual Studio 2013\Projects\COMP397-Midterm-Die-Roller\COMP397-Midterm-Die-Roller\bin\COMP397-Lesson2.pdb
+C:\Users\Faim\Documents\Visual Studio 2013\Projects\COMP397-Midterm-Die-Roller\COMP397-Midterm-Die-Roller\obj\Debug\COMP397-Midterm-Die-Roller.csprojResolveAssemblyReference.cache
+C:\Users\Faim\Documents\Visual Studio 2013\Projects\COMP397-Midterm-Die-Roller\COMP397-Midterm-Die-Roller\obj\Debug\COMP397-Lesson2.dll
+C:\Users\Faim\Documents\Visual Studio 2013\Projects\COMP397-Midterm-Die-Roller\COMP397-Midterm-Die-Roller\obj\Debug\COMP397-Lesson2.pdb
