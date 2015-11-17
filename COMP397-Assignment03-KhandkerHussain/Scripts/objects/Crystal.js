@@ -43,4 +43,4 @@ var objects;
     })(objects.GameObject);
     objects.Crystal = Crystal;
 })(objects || (objects = {}));
-//# sourceMappingURL=Crystal.js.map
+//# sourceMappingURL=crystal.js.map
