@@ -12,8 +12,14 @@
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/player.ts" />
+<<<<<<< HEAD
 /// <reference path="../objects/crystal.ts" />
 /// <reference path="../objects/enemy.ts" />
+=======
+/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/enemy.ts" />
+/// <reference path="../objects/cloud.ts" />
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 /// <reference path="../objects/background.ts" />
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../states/over.ts" />
@@ -26,7 +32,11 @@ var stage;
 var stats;
 var state;
 var currentState; //alias for our current state
+<<<<<<< HEAD
 var atlas; //texture/sprite atlas
+=======
+var atlasPlayer; //texture/sprite atlas
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 //GAME OBJECTS
 var menu;
 var game;
@@ -80,7 +90,11 @@ function preload() {
     assets.on("complete", init, this);
     assets.loadManifest(manifest);
     //SPRITE SHEET IS CONFIGIRUED
+<<<<<<< HEAD
     atlas = new createjs.SpriteSheet(data);
+=======
+    atlasPlayer = new createjs.SpriteSheet(data);
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 }
 //INITIALZING METHOD
 function init() {

@@ -11,6 +11,7 @@ var objects;
         //CONSTRUCTOR
         function Enemy() {
             _super.call(this, "enemy");
+<<<<<<< HEAD
             this._reset(); //resets x position of enemy
         }
         //PUBLIC METHODS
@@ -20,10 +21,22 @@ var objects;
         Enemy.prototype.update = function () {
             this.x -= this._dx;
             this.y -= this._dy;
+=======
+            this._reset(); //resets y position of ocean
+        }
+        //PUBLIC METHODS
+        /**
+         * Update method for Ocean
+         */
+        Enemy.prototype.update = function () {
+            this.x += this._dx;
+            this.y += this._dy;
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
             this._checkBounds();
         };
         //PRIVATE METHODS
         /**
+<<<<<<< HEAD
          * Resetes background to y= -960
          */
         Enemy.prototype._reset = function () {
@@ -39,6 +52,23 @@ var objects;
         Enemy.prototype._checkBounds = function () {
             //conditional to call reset() to reposition the y-axis
             if (this.x <= -(480 + this._width)) {
+=======
+         * Resetes Ocean to y= -960
+         */
+        Enemy.prototype._reset = function () {
+            this._dx = Math.floor(Math.random() * 4) - 2; //"horizontal drift"
+            this._dy = Math.floor(Math.random() * 5) + 5; //vertical speed
+            //random location on x-axis. (note: + 1 shifts the initial position from canvas to right
+            this.x = Math.floor(Math.random() * 640) + 1;
+            this.y = -this._height;
+        };
+        /**
+         * Checks to see when ocean needs to "reset"
+         */
+        Enemy.prototype._checkBounds = function () {
+            //conditional to call reset() to reposition the y-axis
+            if (this.y >= (480 + this._height)) {
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
                 this._reset();
             }
         };

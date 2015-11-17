@@ -29,6 +29,7 @@ var managers;
                 if (!object2.getIsColliding()) {
                     //DISTINGUISHES WHAT THE OBJECT (IN THIS CASE: PLANE) HITS (EITHER CLOUD/ISLAND)
                     switch (object2.getName()) {
+<<<<<<< HEAD
                         case "BlueCrystal":
                             scoreboard.addScore(10);
                             createjs.Sound.play("pickup");
@@ -37,6 +38,15 @@ var managers;
                             scoreboard.removeLives(1);
                             createjs.Sound.play("explode");
                             //HELP: INSERT FUNCTION TO REMOVE CRYSTAL ONCE CONTACTED!
+=======
+                        case "island":
+                            scoreboard.addScore(100);
+                            createjs.Sound.play("yay");
+                            break;
+                        case "cloud":
+                            scoreboard.removeLives(1);
+                            createjs.Sound.play("thunder");
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
                             break;
                     }
                     object2.setIsColliding(true);

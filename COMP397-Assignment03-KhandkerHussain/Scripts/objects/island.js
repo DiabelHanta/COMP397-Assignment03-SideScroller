@@ -9,7 +9,11 @@ var objects;
         __extends(Island, _super);
         //CONSTRUCTOR
         function Island() {
+<<<<<<< HEAD
             _super.call(this, "BlueCrystal");
+=======
+            _super.call(this, "island");
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
             this._dy = 5;
             this._reset(); //resets y position of ocean
         }

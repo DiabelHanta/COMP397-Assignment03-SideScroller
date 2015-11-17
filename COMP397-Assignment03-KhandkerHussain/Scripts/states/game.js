@@ -12,8 +12,13 @@ var states;
         //CONSTRUCTOR
         function Game() {
             _super.call(this);
+<<<<<<< HEAD
             //instantiates objects as an array of any "enemies"
             this.Enemies = []; //array of enemies
+=======
+            //instantiates objects as an array of any "clouds"
+            this._clouds = []; //array of clouds
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
         }
         //PUBLIC METHODS
         //OVERRIDING THE FOLLOWING FUNCTIONS (from scene.ts)
@@ -27,6 +32,7 @@ var states;
             //adds background to scene
             this._background = new objects.Background(); //referring ship type object to player's sprite w/i "ship.ts"
             this.addChild(this._background); //adding ship sprite
+<<<<<<< HEAD
             //adds crsytal to scene
             this._crystal = new objects.Crystal();
             this.addChild(this._crystal);
@@ -37,6 +43,18 @@ var states;
             for (var enemy = 0; enemy < 3; enemy++) {
                 this.Enemies[enemy] = new objects.Enemy();
                 this.addChild(this.Enemies[enemy]);
+=======
+            //adds island to scene
+            this._island = new objects.Island();
+            this.addChild(this._island);
+            //adds player to scene
+            this._player = new objects.Player();
+            this.addChild(this._player);
+            //adds clouds ARRAY to scene
+            for (var cloud = 0; cloud < 3; cloud++) {
+                this._clouds[cloud] = new objects.Cloud();
+                this.addChild(this._clouds[cloud]);
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
             }
             //adds score label to scene
             this._scoreLabel = new objects.Label("Score: ", "40px Showcard Gothic", "#FFFFFF", 100, 25, true);
@@ -52,6 +70,7 @@ var states;
         //updates the scene every frame
         Game.prototype.update = function () {
             this._background.update(); //calling background's update() from "background.ts"
+<<<<<<< HEAD
             this._crystal.update(); //calling Crystal's update() from "crystal.ts"
             this._player.update(); //calling player's update() from "player.ts"
             //update each enemies to scene
@@ -61,6 +80,17 @@ var states;
             }
             //COLLISION B/W player AND crystal
             this._collision.update(this._player, this._crystal);
+=======
+            this._island.update(); //calling island's update() from "island.ts"
+            this._player.update(); //calling player's update() from "player.ts"
+            //update each cloud to scene
+            for (var cloud = 0; cloud < 3; cloud++) {
+                this._clouds[cloud].update(); //calling cloud's update() from "cloud.ts"
+                this._collision.update(this._player, this._clouds[cloud]);
+            }
+            //COLLISION B/W player AND ISLAND
+            this._collision.update(this._player, this._island);
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
             this._updateScore();
         };
         //UPDATING THE LABELS

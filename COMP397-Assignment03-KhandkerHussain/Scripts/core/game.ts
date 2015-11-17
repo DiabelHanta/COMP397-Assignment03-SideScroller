@@ -15,8 +15,14 @@
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/player.ts" />
+<<<<<<< HEAD
 /// <reference path="../objects/crystal.ts" />
 /// <reference path="../objects/enemy.ts" />
+=======
+/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/enemy.ts" />
+/// <reference path="../objects/cloud.ts" />
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 /// <reference path="../objects/background.ts" />
 /// <reference path="../objects/scene.ts" />
 
@@ -31,7 +37,11 @@ var stage: createjs.Stage;
 var stats: Stats;
 var state: number;
 var currentState: objects.Scene; //alias for our current state
+<<<<<<< HEAD
 var atlas: createjs.SpriteSheet; //texture/sprite atlas
+=======
+var atlasPlayer: createjs.SpriteSheet; //texture/sprite atlas
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 
 //GAME OBJECTS
 var menu: states.Start;
@@ -78,7 +88,10 @@ var data =
             "enemyship": [9],
             "PurpleCrystal": [10]
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
     };
 
 //MANIFEST OF ALL ASSETS (ARRAY)
@@ -100,7 +113,11 @@ function preload():void
     assets.loadManifest(manifest);
 
     //SPRITE SHEET IS CONFIGIRUED
+<<<<<<< HEAD
     atlas = new createjs.SpriteSheet(data);
+=======
+    atlasPlayer = new createjs.SpriteSheet(data);
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 }
 
 //INITIALZING METHOD

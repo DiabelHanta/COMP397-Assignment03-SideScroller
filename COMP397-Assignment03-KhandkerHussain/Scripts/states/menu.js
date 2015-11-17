@@ -23,7 +23,11 @@ var states;
             this._gameLabel = new objects.Label("Space Jewels! (not balls...)", "35px Papyrus", "#FFFFFF", 320, 70, true);
             this.addChild(this._gameLabel); //adds "helloLabel" to the stage as a "child"
             //INSTRUCTIONS LABEL
+<<<<<<< HEAD
             this._instructions = new objects.Label("Instructions:\n1. Avoid enemy space ships\n2. Pickup jewels\n3. Profit...\n4. You Win!", "25px Papyrus", "#FFFFFF", 360, 225, true);
+=======
+            this._instructions = new objects.Label("Instructions:\n1. Avoid enemy space ships\n2.Pickup jewels\n3. Profit...\n4. You Win!", "25px Papyrus", "#FFFFFF", 360, 225, true);
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
             this.addChild(this._instructions);
             //START BUTTON
             this._startButton = new objects.Button("startButton", 320, 380);

@@ -12,7 +12,11 @@
         //CONSTRUCTOR
         constructor(imageString:string)
         {
+<<<<<<< HEAD
             super(atlas, imageString);
+=======
+            super(atlasPlayer, imageString);
+>>>>>>> 5e420b69b384269633e2f035c8f05e635d5ddd8b
 
             this._name = imageString;
             this._width = this.getBounds().width;
