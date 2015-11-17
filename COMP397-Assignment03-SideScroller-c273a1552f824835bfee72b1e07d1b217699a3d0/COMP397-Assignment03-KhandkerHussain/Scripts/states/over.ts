@@ -6,6 +6,7 @@ module states
     {
         //PRIVATE INSTANCE VARIABLES
         _gameOverLabel: objects.Label; //(example of: composition - classes share objects)
+        _finalScoreLabel: objects.Label
         _menuButton: objects.Button;
 
         //CONSTRUCTOR
@@ -21,9 +22,13 @@ module states
             //Gameover music
             createjs.Sound.play("gameOver", 0, 0, 0, -1, 1, 0);
 
-            //LEVEL LABEL
+            //GAME OVER LABEL
             this._gameOverLabel = new objects.Label("Game Over!", "40px Showcard Gothic", "#000000", 320, 100, true);
-            this.addChild(this._gameOverLabel); //adds "helloLabel" to the stage as a "child"
+            this.addChild(this._gameOverLabel);
+
+            ////FINAL SCORE LABEL
+            //this._finalScoreLabel = new objects.Label("Game Over!", "40px Showcard Gothic", "#000000", 320, 100, true);
+            //this.addChild(this._finalScoreLabel);
 
             //BACK BUTTON
             this._menuButton = new objects.Button("menuButton", 320, 300);
@@ -42,6 +47,7 @@ module states
         //CALLBACK FUNCTIONS/EVENT HANDLER FOR BACK BUTTON "click"
         private _clickBackButton(event: createjs.MouseEvent): void
         {
+            createjs.Sound.stop();
             changeState(config.MENU_STATE); //transferring back to menu
         }
     }
